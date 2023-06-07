@@ -7,7 +7,7 @@ def uppercase(str):
             for j in range(97, 123):
                 if test == j:
                     test = test - 32
-                    print("{:c}".format(test), end=""  if i != n else "\n")
+                    print("{:c}".format(test), end="" if i != n else "\n")
                     break
         else:
             print("{:c}".format(test), end="" if i != n else "\n")
