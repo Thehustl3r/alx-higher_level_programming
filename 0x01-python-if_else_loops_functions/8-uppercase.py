@@ -7,3 +7,4 @@ def uppercase(str):
                 test = test - 32
                 break
         str[i] = chr(test)
+    print("%s"% str)
