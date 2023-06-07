@@ -9,5 +9,4 @@ def uppercase(str):
                     print("{:c}".format(test), end="")
                     break
         else:
-            print("{:c}".format(test), end="")
-    print("\n")
+            print("{:c}".format(test), end="" if i < len(str) else "\n")
