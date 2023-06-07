@@ -6,7 +6,7 @@ def uppercase(str):
         for j in range(97, 123):
             if test == j:
                 test = test - 32
-                print("{:c}".format(test), end ="")
+                print("{:c}".format(test), end="")
                 break
+        print("{:c}".format(test), end="")
         newstring.append(chr(test))
-    print("\n")
