@@ -10,7 +10,7 @@ else:
     number = number % 10
 print(f"is {number} ", end="")
 if number > 5:
-    print("and is great than 5")
+    print("and is greater than 5")
 elif number == 0:
     print("and is 0")
 else:
