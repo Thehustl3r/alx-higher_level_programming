@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-def add(a, b):
-    a= 1
-    b=2
-    print("{} yes".format(a + b))
-    return (a + b)
+import add_0
+a= 1
+b=2
+su = add_0.add(a, b)
+print("{} + {} = {}".format(a, b, su))
