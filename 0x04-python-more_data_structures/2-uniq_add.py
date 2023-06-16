@@ -2,6 +2,8 @@
 def uniq_add(my_list=[]):
     summ = 0
     flag = 0
+    if my_list is None:
+        return 0
     for a, i in enumerate(my_list):
         flag = 0
         for b, j in enumerate(my_list):
