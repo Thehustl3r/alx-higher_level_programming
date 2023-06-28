@@ -6,7 +6,7 @@ def list_division(my_list_1, my_list_2, list_length):
     takes two listsnd creates a new list with result of divison
     operation
 
-    handles errors rints them to 
+    handles errors rints them to
     """
     new_list = []
     result = 0
