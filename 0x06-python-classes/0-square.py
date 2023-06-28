@@ -7,7 +7,8 @@ Created on Tue June 28 02:21:54 2023
 
 
 class Square:
-        """Empty class Square that defines a square
+
+        """ Empty class Square that defines a square
 
             Attributes:
                     empty
