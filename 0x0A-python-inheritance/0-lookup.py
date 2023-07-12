@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" Function for lookup  """
+
 
 def lookup(obj):
-    lists = dir(obj)
-    lists_new = [li for li in lists]
-    return (lists_new)
+    return dir(obj)
