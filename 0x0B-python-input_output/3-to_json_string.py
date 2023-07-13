@@ -1,15 +1,16 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
-""" file created by Mugisha Prosper"""
+""" Created by Mugisha Prosper """
 import json
 
 
 def to_json_string(my_obj):
     """
-    function that converts to json
+    Returs a json string containg object's representation
 
-    Argruments:
-        my_obj (str): a list needed to converted to json
+    Argumens:
+        my_obj (str): The inputed object to convert in json format
+
     Return:
         A json format text
     """
