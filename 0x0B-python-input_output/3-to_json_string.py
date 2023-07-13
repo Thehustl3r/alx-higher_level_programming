@@ -1,6 +1,9 @@
 #!/bin/usr/python3
-import json
+# -*- coding: utf-8 -*-
 """ file created by Mugisha Prosper"""
+
+
+import json
 
 
 def to_json_string(my_obj):
