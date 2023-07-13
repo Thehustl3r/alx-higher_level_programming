@@ -9,4 +9,3 @@ def save_to_json_file(my_obj, filename):
         json_obj = json.dumps(my_obj)
         file.write(json_obj)
         file.close()
-

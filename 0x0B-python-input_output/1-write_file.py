@@ -10,4 +10,3 @@ def write_file(filename="", text=""):
         file.write(text)
         file.close()
         return n
-
