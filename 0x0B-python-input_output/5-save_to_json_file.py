@@ -1,6 +1,6 @@
-#!/bin/usr/python3
-import json
+#!/usr/bin/python3
 """ file created by Mugisha Prosper"""
+import json
 
 
 def save_to_json_file(my_obj, filename):
