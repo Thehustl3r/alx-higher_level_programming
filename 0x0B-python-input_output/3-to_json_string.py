@@ -13,4 +13,4 @@ def to_json_string(my_obj):
     Return:
         A json format text
     """
-    return json.dumps(my_obj, sort_keys=True)
+    return json.dumps(my_obj)
