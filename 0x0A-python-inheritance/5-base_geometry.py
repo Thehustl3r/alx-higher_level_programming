@@ -2,7 +2,6 @@
 """ Created by Mugisha prosper"""
 
 
-
 class BaseGeometry:
     """ an empty class"""
     pass
