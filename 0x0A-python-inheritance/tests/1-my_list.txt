@@ -1,10 +1,9 @@
-Test for 1-my_list.py
 -------------------------------------------
 case 0: import
 >>> MyList = __import__('1-my_list').MyList
 >>>
 -------------------------------------------
-Normalo case:
+Normal case:
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
@@ -20,62 +19,35 @@ Normalo case:
 >>>
 -------------------------------------------
 meeting with undefined list:
->>> MyList = __import__('1-my_list').MyList
 >>> my_list2.print_sorted()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'my_list2' is not defined
 >>>
 -------------------------------------------
-Normal arrangement a list
->>> a = [1, 5, 4]
->>> my_list = MyList(a)
->>> my_list.print_sorted()
-[1, 4, 5]
->>>
--------------------------------------------
-ordering the empty list:
->>> a = []
->>> my_list = MyList(a)
->>> my_list.print_sorted()
-[]
->>>
--------------------------------------------
-case 5: unique number
+entering a non-integer:
 >>> my_list = MyList()
 >>> my_list.append(1)
->>> my_list.print_sorted()
-[1]
->>> print(my_list)
-[1]
->>>
--------------------------------------------
-meating the same number:
->>> my_list2 = MyList()
->>> my_list2.append(1)
->>> my_list2.append(1)
->>> my_list2.append(1)
->>> my_list2.append(1)
->>> my_list2.print_sorted()
-[1, 1, 1, 1]
->>>
--------------------------------------------
-meating with paret object:
->>> my_list = [1, 2, 3]
->>> my_list.print_sorted()
+>>> my_list.append(l)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-AttributeError: 'list' object has no attribute 'print_sorted'
+NameError: name 'l' is not defined
 >>>
 -------------------------------------------
-checking negative numbers:
->>> MyList = __import__('1-my_list').MyList
+inserting a negative number:
 >>> my_list = MyList()
->>> my_list.append(5)
->>> my_list.append(1)
 >>> my_list.append(-1)
->>> my_list.append(51)
->>> my_list.append(-5)
->>> my_list.print_sorted()
-[-5, -1, 1, 5, 51]
+>>> print(my_list)
+[-1]
+>>>
+-------------------------------------------
+trying to use underfined method:
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> print(my_list)
+[-1]
+>>> my_list.app(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'MyList' object has no attribute 'app'
 >>>
