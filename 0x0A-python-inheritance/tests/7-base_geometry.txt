@@ -1,0 +1,49 @@
+case 0: import
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>>
+-------------------------------------------
+normal case:
+>>> bg = BaseGeometry()
+>>>
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+>>>
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] name must be an integer
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] age must be greater than 0
+>>> try:
+...     bg.integer_validator("distance", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[ValueError] distance must be greater than 0
+>>>
+-------------------------------------------
+try to use underfined obj:
+>> bg1.integer_validator("width", 12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'bg1' is not defined
+>>> try:
+...     bg1.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[NameError] name 'bg1' is not defined
+>>> try:
+...     bg.integer_validato("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[AttributeError] 'BaseGeometry' object has no attribute 'integer_validato'
+>>>
+-------------------------------
