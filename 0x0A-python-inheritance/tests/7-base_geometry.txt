@@ -89,7 +89,8 @@ wheb the method is not defined:
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ...
->>> try:
+
+[TypeError] age must be an integer
 ...     bg.integer_validator("age", None)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
