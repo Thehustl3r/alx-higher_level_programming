@@ -47,3 +47,60 @@ NameError: name 'bg1' is not defined
 [AttributeError] 'BaseGeometry' object has no attribute 'integer_validato'
 >>>
 -------------------------------
+ integer_validator():
+>>> try:
+...     bg.integer_validator()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>>
+-------------------------------------------
+integer_validator(“age”):
+>>> try:
+...     bg.integer_validator("age")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
+>>>
+-------------------------------------------
+wheb the method is not defined:
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[Exception] area() is not implemented
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] age must be an integer
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] age must be an integer
+>>> try:
+...     bg.integer_validator("age", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] age must be an integer
+>>> try:
+...     bg.integer_validator("age", {3, 4})
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+...
+[TypeError] age must be an integer
+>>>
+-------------------------------------------
+
