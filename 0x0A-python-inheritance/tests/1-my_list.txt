@@ -51,3 +51,20 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 AttributeError: 'MyList' object has no attribute 'app'
 >>>
+-------------------------------------------
+with no sorted append with negative number:
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(-4)
+>>> print(my_list)
+[1, 4, -4]
+>>> my_list.print_sorted()
+[-4, 1, 4]
+>>>
+-------------------------------------------
+with empty list:
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>>
