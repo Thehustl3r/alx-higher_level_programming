@@ -11,12 +11,16 @@ class TestBase(unittest.TestCase):
         Base._Base__nb_objects = 0
 
     def test_init(self):
+        """ constructor"""
+
         self.assertEqual(Base().id, 1)
         self.assertEqual(Base(12).id, 12)
         self.assertEqual(Base(0).id, 0)
         self.assertEqual(Base(-2).id, -2)
 
     def test_to_json_string(self):
+        """ to json to String"""
+
         list_dicts = [{'id': 1, 'width': 2, 'height': 3},
                       {'id': 4, 'width': 5, 'height': 6}]
         json_string = Base.to_json_string(list_dicts)
@@ -31,6 +35,8 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_string_none, '[]')
 
     def test_from_json_string(self):
+        """ from string to string"""
+
         json_string = '[{"id": 1, "width": 2, "height": 3},' \
                         '{"id": 4, "width": 5, "height": 6}]'
         list_dicts = Base.from_json_string(json_string)
