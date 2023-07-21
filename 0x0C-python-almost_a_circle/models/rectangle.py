@@ -107,6 +107,18 @@ class Rectangle(Base):
 
         return attributes
 
+    def __eq__(self, other):
+        """Override the equality comparison to compare attributes."""
+        if isinstance(other, Rectangle):
+            return (
+                self.id == other.id and
+                self.width == other.width and
+                self.height == other.height and
+                self.x == other.x and
+                self.y == other.y
+            )
+        return False
+
     def __str__(self):
         """ ovviride"""
         return ("[Rectangle] ({}) {}/{} - {}"
