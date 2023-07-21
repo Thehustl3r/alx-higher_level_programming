@@ -37,8 +37,8 @@ class TestBase(unittest.TestCase):
     def test_from_json_string(self):
         """ from string to string"""
 
-        json_string = '[{"id": 1, "width": 2, "height": 3},' \
-                        '{"id": 4, "width": 5, "height": 6}]'
+        json_string = '[{"id": 1, "width": 2, "height": 3},'\
+                      '{"id": 4, "width": 5, "height": 6}]'
         list_dicts = Base.from_json_string(json_string)
         self.assertEqual(list_dicts, [{'id': 1, 'width': 2, 'height': 3},
                                       {'id': 4, 'width': 5, 'height': 6}])
