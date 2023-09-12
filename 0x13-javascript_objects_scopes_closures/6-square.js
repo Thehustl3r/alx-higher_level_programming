@@ -6,7 +6,7 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    super.x = c === undefined ? 'x' : c;
+    super.x = c === undefined ? 'X' : c;
     super.print();
   }
 }
