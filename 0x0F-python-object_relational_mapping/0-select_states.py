@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+"""
+created by Mugisha Prosper
+at Fri, 15,09,23
+"""
 import MySQLdb
 import sys
-"""
-    created by Mugisha Prosper
-    at Fri, 15,09,23
-"""
 
 
 if __name__ == "__main__":
