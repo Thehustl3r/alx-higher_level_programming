@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
-import re
 """
     created by Mugisha Prosper
     at Fri, 15,09,23
 """
+import MySQLdb
+import sys
+import re
 
 
 if __name__ == "__main__":
