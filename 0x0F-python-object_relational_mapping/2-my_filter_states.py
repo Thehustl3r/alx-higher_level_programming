@@ -13,12 +13,14 @@ if __name__ == "__main__":
     my_user = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
-    query = sys.argv[4]
+    search_item = sys.argv[4]
     db = MySQLdb.connect(host="localhost", port=3306, user=my_user,
                          passwd=password, db=db_name, charset="utf8")
     cur = db.cursor()
-    sql_query = "SELECT * FROM states WHERE name= %s ORDER BY states.id ASC"
-    cur.execute(sql_query, (query,))
+    query = ("SELECT * FROM states WHERE name= '{}' ORDER BY states.id ASC"
+             .format(search_item))
+    print(query)
+    cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
         print(row)
