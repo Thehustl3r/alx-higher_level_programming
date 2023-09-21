@@ -17,7 +17,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", port=3306, user=my_user,
                          passwd=password, db=db_name, charset="utf8")
     cur = db.cursor()
-    query = ("SELECT * FROM states WHERE name= '{}' ORDER BY states.id ASC"
+    query = ("SELECT * FROM states"
+             " WHERE name COLLATE utf8mb4_bin = '{}'"
+             " ORDER BY states.id ASC"
              .format(search_item))
     cur.execute(query)
     rows = cur.fetchall()
