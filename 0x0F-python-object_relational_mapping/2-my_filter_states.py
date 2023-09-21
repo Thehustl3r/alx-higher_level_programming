@@ -19,7 +19,6 @@ if __name__ == "__main__":
     cur = db.cursor()
     query = ("SELECT * FROM states WHERE name= '{}' ORDER BY states.id ASC"
              .format(search_item))
-    print(query)
     cur.execute(query)
     rows = cur.fetchall()
     for row in rows:
