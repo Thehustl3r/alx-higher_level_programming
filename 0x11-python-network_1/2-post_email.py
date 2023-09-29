@@ -13,7 +13,7 @@ value = {'email': email}
 url = sys.argv[1]
 data = urllib.parse.urlencode(value)
 data = data.encode('utf-8')
-#req = urllib.request.Request(url, data)
+# req = urllib.request.Request(url, data)
 with urllib.request.urlopen(url, data) as response:
     the_page = response.read().decode('utf-8')
     print(the_page)
