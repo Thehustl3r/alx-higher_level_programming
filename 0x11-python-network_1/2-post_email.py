@@ -10,9 +10,9 @@ if (len(argv) != 3):
 
 email = {'email': argv[2]}
 url = argv[1]
-data = urlencode(email)
-data = data.encode('utf-8')
-req = Request(url, data)
+email = urlencode(email)
+email = email.encode('utf-8')
+req = Request(url, email)
 with urlopen(req) as response:
     the_page = response.read().decode('utf-8')
     print(the_page)
