@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 """ this module tends to fetch data from url"""
-import urllib.request
-import urllib.parse
-import sys
+from urllib.request import urlopen, Request
+from urllib.parse import urlencode
+from sys import argv
 
 
-if (len(sys.argv) != 3):
+if (len(argv) != 3):
     exit(1)
 
-email = sys.argv[2]
-value = {'email': email}
-url = sys.argv[1]
-data = urllib.parse.urlencode(value)
+email = {'email': argv[2]}
+url = argv[1]
+data = urlencode(email)
 data = data.encode('utf-8')
-# req = urllib.request.Request(url, data)
-with urllib.request.urlopen(url, data) as response:
+req = Request(url, data)
+with urlopen(req) as response:
     the_page = response.read().decode('utf-8')
     print(the_page)
