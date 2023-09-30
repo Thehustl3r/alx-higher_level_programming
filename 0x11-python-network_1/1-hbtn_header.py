@@ -4,10 +4,7 @@ import urllib.request
 import sys
 
 
-if (len(sys.argv) != 2):
-    exit(1)
-
-url = '{}'.format(sys.argv[1])
+url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
-    header = response.headers['X-Request-Id']
+    header = response.info()['X-Request-Id']
     print(header)
