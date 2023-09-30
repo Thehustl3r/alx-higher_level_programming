@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ this module tends to fetch data from database """
-from requests import post, code
+from requests import post, codes
 from sys import argv
 
 
