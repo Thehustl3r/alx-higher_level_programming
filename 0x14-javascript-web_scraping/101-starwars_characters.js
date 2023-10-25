@@ -13,37 +13,28 @@ request(
       try {
         const movieData = JSON.parse(body);
         if (movieData.characters && movieData.characters.length > 0) {
-		const charUrls = movieData.characters;
+          const charUrls = movieData.characters;
 
-		const fetchCharacter = (index) => {
+          const fetchCharacter = (index) => {
+            if (index < charUrls.length) {
+              request(
 
-			if (index < characterUrls.length){
+                charUrls[index],
+                (charError, charResponse, charBody) => {
+                  if (charError) { process.exit(1); } else if (charResponse.statusCode !== 200) { process.exit(1); } else {
+                    const charData = JSON.parse(charBody);
+                    console.log(charData.name);
 
-				request(
-
-					charUrls[index],
-					(charError, charResponse, charBody) => {
-
-						if (charError)
-							process.exit(1);
-						else if (charResponse.statusCode !== 200)
-							process.exit(1);
-						else {
-
-							const charData = JSON.parse(charBody);
-							console.log(charData.name);
-
-							// Fetch the next character
-							fetchCharacter(index + 1);
-						}
-					}
-				);
-			
-			}
-		};
-		fetchCharacter(0);
-          }else{
-		  process.exit(1);
+                    // Fetch the next character
+                    fetchCharacter(index + 1);
+                  }
+                }
+              );
+            }
+          };
+          fetchCharacter(0);
+        } else {
+          process.exit(1);
         }
       } catch (e) {
         process.exit(1);
