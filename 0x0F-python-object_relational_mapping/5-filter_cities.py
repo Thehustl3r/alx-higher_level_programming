@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     i = 1
     for row in rows:
-        print(row[0], end=', ' if(i < len(rows)) else '')
+        print(row[0], end=', ' if (i < len(rows)) else '')
         i += 1
     print()
     cur.close()
